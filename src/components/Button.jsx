@@ -5,7 +5,7 @@ import "./Button.css";
 const Button = ({ onEmailSubmit }) => {
   return (
     <button className="btn-submit" onClick={onEmailSubmit}>
-      <div className="overlay" />
+      <span className="overlay" />
       <img src={arrow} alt="icon arrow" />
     </button>
   );
