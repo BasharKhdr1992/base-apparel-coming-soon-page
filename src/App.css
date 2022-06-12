@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-image: url("./images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
 }
 
-.App-link {
-  color: #61dafb;
+.text-content {
+  width: 50%;
+  padding: 3rem 6rem 0rem 6rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.header {
+  margin-top: 7rem;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  color: hsl(0, 6%, 24%);
+}
+
+.header-part-1 {
+  color: hsl(0, 36%, 70%);
+}
+
+.para {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: hsl(0, 36%, 70%);
+  line-height: 2rem;
+}
+
+.img-container {
+  width: 50%;
+  height: 100vh;
+}
+
+.img-container img {
+  width: 100%;
+  height: inherit;
+}
+
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .app-wrapper {
+    padding-bottom: 2rem;
+    background-image: none;
+    flex-direction: column-reverse;
   }
-  to {
-    transform: rotate(360deg);
+
+  .img-container {
+    height: auto;
+  }
+
+  .mobile {
+    width: 45%;
+    padding: 2rem;
+    display: block;
+  }
+
+  .collapse {
+    display: none;
+  }
+
+  .text-content {
+    width: 90%;
+    padding: 0;
+    margin: auto;
+  }
+
+  .header,
+  .para {
+    text-align: center;
+  }
+
+  .img-container {
+    width: 100%;
   }
 }
